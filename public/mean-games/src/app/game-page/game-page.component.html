@@ -1,0 +1,19 @@
+<div >
+
+    <!-- <div class="contents-games mygames"></div> -->
+ 
+    <h2>Information about {{game.title }} </h2>
+
+    
+<p>
+    Title: {{game.title}} <br/>
+    price: {{game.price | currency }} <br/>
+    Year: {{game.year}}
+</p>
+
+
+<td><span class="btn btn-success style-2"></span></td><td><button class="btn btn-danger style-2"   (click)="deleteGame(game._id)" >Delete</button></td>
+
+</div>
+
+

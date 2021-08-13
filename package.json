@@ -1,0 +1,23 @@
+{
+  "name": "gameang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app1.js",
+  "scripts": {
+    "startBackEnd": "node app1.js",
+    "startFrontEnd": "cd ./public/mean-games/ && npm start",
+    "start": "npm-run-all --parallel  startBackEnd startFrontEnd",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bootstrap": "^5.1.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.6",
+    "npm-run-all": "^4.1.5"
+  }
+}

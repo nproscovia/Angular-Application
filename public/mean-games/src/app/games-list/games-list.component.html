@@ -1,0 +1,113 @@
+<div class="contents-games mygames container">
+    <div class="row">
+    <div class="col-xs-6">
+    <h1>Welcome to {{title}} application</h1>
+    
+    <ul *ngFor="let game of games">
+        <li>
+            <a routerLink="/game/{{game._id}}"> {{game.title}} </a><br/>
+
+
+           
+    
+    
+    
+        </li>
+    </ul>
+    
+    </div>
+    
+    
+    <div class="col-xs-6">
+    
+    </div>
+    
+    </div>
+    
+    
+    
+    <!-- <br/> -->
+    
+    
+    
+    <!-- <div class="addgames">
+    
+        <h1> Add New Mean Game</h1>
+    
+    
+        <div class="alert alert-danger" *ngIf="err" >
+            <h5> {{error}} </h5>
+        </div>
+        
+        <div class="alert alert-success" *ngIf="success" >
+            <h5>{{message}}</h5>
+            
+        </div>
+     -->
+        <!-- <form  #gameForm="ngForm"  (ngSubmit)="addGame(gameForm)">
+            <fieldset>
+            <div class="form-group">
+            <label for="title">Title </label> 
+            <input name="title" class="form-control" ngModel type="text" #title="ngModel"  type="text" id="title"  required/> 
+            </div>
+            <div class="form-group">
+                <label for="price">Price </label> 
+                <input name="price" class="form-control" ngModel  #price="ngModel" type="number" id="price" ng-pattern="/^[0-9]{1,}$/" required /> 
+            </div>
+            
+            <div class="form-group">
+                <label for="year">Year </label> 
+                <input name="year" class="form-control" ngModel  #year="ngModel" type="number" id="year" required/> 
+            </div>
+    
+            <div class="form-group">
+                <label for="minAge">Minimum Age </label> 
+                <input name="minAge" class="form-control" ngModel  #minAge="ngModel" type="number" id="minAge" required/> 
+            </div>
+            
+            <div class="form-group">
+                <label for="rate">Rate </label> 
+                <input name="rate" class="form-control"ngModel  #rate="ngModel" type="number" id="rate" required /> 
+            </div>
+            <div class="form-group">
+                <label for="minPlayers">Minimum Players</label> 
+                <input name="minPlayers" class="form-control" ngModel  #minPlayers="ngModel" type="text" id="minPlayers" required/> 
+            </div>
+            <div class="form-group">
+                <label for="maxPlayers">Maximum Players</label> 
+                <input name="maxPlayers" class="form-control" ngModel  #maxPlayers="ngModel" type="text" id="maxPlayers" /> 
+            </div>
+            <div class="form-group">
+                <label for="designers">Designers</label> 
+                <input name="designers" class="form-control" ngModel  #designers="ngModel" type="text" id="designers" /> 
+            </div>
+            
+            
+            <button class="btn btn-success"  name="submit" >Submit </button>
+            </fieldset> 
+            </form> -->
+    <!-- </div>
+    </div> -->
+
+
+    <!-- <div class="card"> -->
+        <div>
+        <!-- <div class="card-header heading"> -->
+            <h2> <strong>search for a game</strong></h2> 
+    
+        <!-- </div> -->
+        <!-- <div class="card-body"> -->
+            <div>
+          <!-- <div class="card-header"> -->
+
+           <!-- <form  ng-submit="vm.searchGames()">Search game by title: <input type="text" name="searchText" ng-model="vm.stext" /> &nbsp;&nbsp; <button>Search</button> </form> -->
+           <form  ng-submit="vm.searchGames()">Search game by title: <input type="text" name="searchText" ng-model="vm.stext" /> &nbsp;&nbsp; <button class="btn btn-danger style-2"(click)="searchGame(games.title" >search</button></form>
+           
+            <br/>
+             Search game by location<form  ng-submit="vm.GeosearchGames()">Longitude : <input type="text" required name="lng" ng-model="vm.longitude" /> &nbsp;Latitude:  <input type="text" name="lat" required ng-model="vm.latitude" /> distance: <input type="text" name="distance" required ng-model="vm.distance" />&nbsp; <button>search</button> </form>
+    
+          </div>
+            
+              </div>
+    
+      </div>

@@ -1,0 +1,62 @@
+<br/> <br/><br/><br/>
+
+
+<div class="alert alert-danger" *ngIf="err" >
+    {{error}}
+</div>
+
+<div class="alert alert-success" *ngIf="success" >
+    <h5>{{message}}</h5>
+</div>
+
+<div class="card">
+    <div class="card-header heading">
+        <h2>Add new game </h2>
+
+    </div>
+    <div class="card-body">
+        <form  #gameForm="ngForm"  (ngSubmit)="addGame(gameForm)">
+            <fieldset>
+            <div class="form-group">
+            <label for="title">Title </label> 
+            <input name="title" class="form-control" ngModel type="text" #title="ngModel"  type="text" id="title"  required/> 
+            </div>
+            <div class="form-group">
+                <label for="price">Price </label> 
+                <input name="price" class="form-control" ngModel  #price="ngModel" type="number" id="price" ng-pattern="/^[0-9]{1,}$/" required /> 
+            </div>
+            
+            <div class="form-group">
+                <label for="year">Year </label> 
+                <input name="year" class="form-control" ngModel  #year="ngModel" type="number" id="year" required/> 
+            </div>
+    
+            <div class="form-group">
+                <label for="minAge">Minimum Age </label> 
+                <input name="minAge" class="form-control" ngModel  #minAge="ngModel" type="number" id="minAge" required/> 
+            </div>
+            
+            <div class="form-group">
+                <label for="rate">Rate </label> 
+                <input name="rate" class="form-control"ngModel  #rate="ngModel" type="number" id="rate" required /> 
+            </div>
+            <div class="form-group">
+                <label for="minPlayers">Minimum Players</label> 
+                <input name="minPlayers" class="form-control" ngModel  #minPlayers="ngModel" type="text" id="minPlayers" required/> 
+            </div>
+            <div class="form-group">
+                <label for="maxPlayers">Maximum Players</label> 
+                <input name="maxPlayers" class="form-control" ngModel  #maxPlayers="ngModel" type="text" id="maxPlayers" /> 
+            </div>
+            <div class="form-group">
+                <label for="designers">Designers</label> 
+                <input name="designers" class="form-control" ngModel  #designers="ngModel" type="text" id="designers" /> 
+            </div>
+            
+            
+            <button class="btn btn-success"  name="submit" >Submit </button>
+            </fieldset> 
+            </form>
+
+    </div>
+  </div>
